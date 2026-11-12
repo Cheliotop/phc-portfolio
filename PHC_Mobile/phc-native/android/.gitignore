@@ -1,0 +1,22 @@
+# OSX
+#
+.DS_Store
+
+# Android/IntelliJ
+#
+build/
+.idea
+.gradle
+local.properties
+*.iml
+*.hprof
+.cxx/
+.kotlin/
+
+# Bundle artifacts
+*.jsbundle
+
+# Release signing (debug.keystore above is intentionally committed — it's
+# not sensitive; a real release key must never be)
+*.jks
+release*.keystore

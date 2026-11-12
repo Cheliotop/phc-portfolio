@@ -1,0 +1,42 @@
+{
+  "expo": {
+    "name": "PHC Drilling",
+    "slug": "phc-native",
+    "version": "2.0.42",
+    "orientation": "default",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": false,
+    "splash": {
+      "image": "./assets/phc-logo.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0B1D3C"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.phc.drillingapp"
+    },
+    "android": {
+      "allowBackup": false,
+      "blockedPermissions": [
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE",
+        "android.permission.SYSTEM_ALERT_WINDOW",
+        "android.permission.RECORD_AUDIO"
+      ],
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#0B1D3C"
+      },
+      "package": "com.sergioclaudecode.PHCmobile"
+    },
+    "jsEngine": "hermes",
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-local-authentication",
+      "expo-sqlite"
+    ]
+  }
+}

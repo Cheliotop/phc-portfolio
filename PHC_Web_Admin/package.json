@@ -1,0 +1,27 @@
+{
+  "name": "phc-web-admin",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "test": "node --test tests/rejectionReason.test.ts tests/pedidoDecisionNotice.test.ts tests/parseDecimal.test.ts tests/buildCsv.test.ts tests/hashRoute.test.ts tests/printableDossier.test.ts tests/apiErrors.test.ts tests/correctionPreview.test.ts tests/operatorTeam.test.ts tests/metricsPeriod.test.ts tests/operatorDeactivation.test.ts tests/authSignOut.test.ts tests/cierresGuards.test.ts tests/dossierCrew.test.ts tests/dashboardLoad.test.ts tests/paraguayNumber.test.ts tests/correctionValue.test.ts tests/budgetImport.test.ts tests/forceClose.test.ts tests/projectEdit.test.ts tests/paging.test.ts tests/unitChange.test.ts tests/printableLists.test.ts tests/dashboardFeed.test.ts tests/supabaseKey.test.ts tests/keepalive.test.ts tests/revisionAuthorship.test.ts",
+    "lint": "oxlint",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.109.0",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7"
+  },
+  "devDependencies": {
+    "@types/node": "^26.1.1",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.3",
+    "oxlint": "^1.71.0",
+    "typescript": "~6.0.2",
+    "vite": "^8.1.1"
+  }
+}

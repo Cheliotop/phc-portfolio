@@ -1,0 +1,14 @@
+node_modules/
+dist/
+.env
+.env.*
+!.env.example
+*.keystore
+*.jks
+*.apk
+*.aab
+.local/
+coverage/
+*.tsbuildinfo
+
+node_modules

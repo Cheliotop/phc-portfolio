@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {},
+  "extends": "expo/tsconfig.base",
+  "exclude": [
+    "__tests__",
+    "node_modules",
+    "src/db/test.ts",
+    "src/db/schemaTest.ts",
+    "src/db/migrationTest.ts"
+  ]
+}

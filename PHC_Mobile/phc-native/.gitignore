@@ -1,0 +1,9 @@
+
+# Maestro E2E screenshots (takeScreenshot writes these to the project root)
+*-success.png
+*-failure.png
+
+# Environment files (never commit real credentials; .env.example stays tracked)
+.env
+.env.*
+!.env.example
