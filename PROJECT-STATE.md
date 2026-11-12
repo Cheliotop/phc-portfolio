@@ -8,6 +8,6 @@ local fixtures/regressions, CI/build/deployment configuration and scripts.
 Excludes private credentials/data, generated builds, editor metadata, operational
 screenshots and original history. Retired Express is not the current backend.
 Authority: docs/SOURCE_INVENTORY.json and docs/SNAPSHOT.md.
-Checks: docs/VERIFICATION.md. Clean-rebuild CI pending for this update.
-Next: check CI, publish verification result. No production action authorized.
+Checks: docs/VERIFICATION.md. Clean-install mobile/web and full58-migration rebuild/seed/API/SQL CI PASS.
+Next: reviewer inspects complete source and setup. No production action taken.
 Rollback: revert this publication update; original project remains unchanged.

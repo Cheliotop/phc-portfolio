@@ -2,6 +2,18 @@
 
 12 de noviembre de2026, fuente local actual con cambios pendientes incluidos.
 
+## CI de la distribución completa
+
+- [Mobile checks — PASS](https://github.com/Cheliotop/phc-portfolio/actions/runs/43332604927): instalación limpia, TypeScript, tests y lint; fuente3bcd451.
+- [Web checks — PASS](https://github.com/Cheliotop/phc-portfolio/actions/runs/43332604774): instalación limpia, TypeScript, tests y lint; fuente3bcd451.
+- [Database checks — PASS](https://github.com/Cheliotop/phc-portfolio/actions/runs/43332910999): reconstrucción desde58 migraciones, seed sintético, fixture de ciclo de cuentas y suites API/SQL; fuente3ae5cb1.
+
+La primera ejecución de base de datos detectó una dependencia de un fixture manual.
+Se agregó preparación automática por la API Auth local y el rerun completo pasó.
+La corrección no cambió el código móvil/web verificado. Esta actualización de
+registro solo modifica documentación.
+
+
 | Comprobación local | Resultado |
 |---|---|
 | Móvil `npm run typecheck` | PASS |

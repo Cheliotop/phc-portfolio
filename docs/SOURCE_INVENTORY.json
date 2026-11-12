@@ -3,7 +3,7 @@
     "path": ".github/workflows/db-checks.yml",
     "status": "included",
     "source": "working tree",
-    "sanitized": false
+    "sanitized": true
   },
   {
     "path": ".github/workflows/mobile-checks.yml",
@@ -3357,7 +3357,7 @@
     "path": "supabase/seed/operator-auth-lifecycle.sql",
     "status": "included",
     "source": "working tree",
-    "sanitized": false
+    "sanitized": true
   },
   {
     "path": "scripts/acceptance/run.cjs",
