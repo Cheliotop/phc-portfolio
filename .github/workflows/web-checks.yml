@@ -1,0 +1,49 @@
+# Typecheck, tests and lint for the web admin, on every push that touches it.
+#
+# The mobile app has had this since 2026-07; the web admin had no pipeline at all
+# (audit H9, 2026-11-05), so its 18 tests and its typecheck ran only when somebody
+# remembered. Deliberately does not deploy: Vercel deploys from its own integration.
+name: web checks
+
+on:
+  push:
+    branches: ['**']
+    paths:
+      - 'PHC_Web_Admin/**'
+      - '.github/workflows/web-checks.yml'
+  pull_request:
+    paths:
+      - 'PHC_Web_Admin/**'
+  workflow_dispatch:
+
+defaults:
+  run:
+    working-directory: PHC_Web_Admin
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          # The tests run TypeScript straight through `node --test`, which needs
+          # Node's built-in type stripping (on by default from 22.18 and 23.6).
+          node-version: '24'
+          cache: npm
+          cache-dependency-path: PHC_Web_Admin/package-lock.json
+
+      - name: Install
+        run: npm ci
+
+      - name: TypeScript
+        run: npx tsc --noEmit -p tsconfig.app.json
+
+      - name: Tests
+        run: npm test
+
+      - name: Lint
+        run: npm run lint

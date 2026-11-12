@@ -1,0 +1,71 @@
+# Runs the checks that already exist, on every push.
+#
+# Before this, the only automated workflow in the repository was the nightly
+# data backup. Typecheck, tests and lint all passed — but only when somebody
+# remembered to run them on a laptop. A suite nobody runs is a record of past
+# intent, not a safety net, and both Fowler's and Mercari's readiness checklists
+# require the pipeline rather than the commands.
+#
+# Deliberately does not build an APK. Release builds are signed with the
+# production certificate, which must not be available to CI.
+name: mobile checks
+
+on:
+  push:
+    branches: ['**']
+    paths:
+      - 'PHC_Mobile/phc-native/**'
+      - '.github/workflows/mobile-checks.yml'
+  pull_request:
+    paths:
+      - 'PHC_Mobile/phc-native/**'
+  workflow_dispatch:
+
+defaults:
+  run:
+    working-directory: PHC_Mobile/phc-native
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          # Must stay >= 22. src/lib/supabase.ts builds the client at import
+          # time, so @supabase/realtime-js resolves a WebSocket constructor as
+          # soon as anything in that chain is required. Node 20 has no global
+          # WebSocket and the library throws "Ensure you are running Node.js
+          # 22+", which fails the suites at LOAD time — they report as "failed
+          # to run", never as a failing assertion, so it does not look like a
+          # version problem. Developers here run 22.
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: PHC_Mobile/phc-native/package-lock.json
+
+      - name: Install
+        run: npm ci
+
+      - name: TypeScript
+        run: npx tsc --noEmit --pretty false
+
+      - name: Tests
+        # Includes the guards that exist because these bugs are invisible to
+        # TypeScript and to Node: engineCompatibility (JavaScriptCore lacks
+        # ES2021+), dateFormat (bare toLocale calls fall back to English),
+        # designSystem (contrast and token drift) and inputPolish (keyboard).
+        run: NODE_ENV=test npx jest --ci --silent
+
+      - name: Lint
+        run: npx eslint src
+
+      - name: Coverage report
+        # Reported, not enforced. Coverage is 26.63% today and Mercari's bar is
+        # 80%; a threshold set here now would fail every build without telling
+        # anyone anything they do not already know. Raise it deliberately as
+        # coverage improves.
+        run: NODE_ENV=test npx jest --ci --coverage --silent --coverageReporters=text-summary
+        continue-on-error: true

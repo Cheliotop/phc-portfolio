@@ -1,0 +1,66 @@
+appId: com.sergioclaudecode.PHCmobile
+---
+- runFlow: login-admin.yaml
+- tapOn: "Proyectos"
+- extendedWaitUntil:
+    visible: "Todos los Proyectos"
+    timeout: 30000
+- scrollUntilVisible:
+    element:
+      text: "Cargar más proyectos"
+    direction: DOWN
+    timeout: 60000
+    speed: 80
+- tapOn: "Cargar más proyectos"
+# Scroll until the "Editar" button itself is visible (not just the project
+# name above it) — scrollUntilVisible stops the instant its own target text
+# clears the visibility threshold, with no awareness that the very next step
+# needs the sibling button further down the same card. Targeting the project
+# name alone reliably left "Editar" just below the fold once ordering became
+# deterministic (previously this could go unnoticed because an unstable sort
+# sometimes scrolled further by chance).
+- scrollUntilVisible:
+    element:
+      text: "Editar"
+      below: "Pozo QA Chaco 03"
+    direction: DOWN
+    timeout: 30000
+- tapOn:
+    text: "Editar"
+    below: "Pozo QA Chaco 03"
+- extendedWaitUntil:
+    visible: "Editar proyecto"
+    timeout: 15000
+# The password field's keyboard from login-admin.yaml can still be up at this
+# point (hideKeyboard there doesn't always stick through the subsequent
+# navigation). With it up, a tap on an item inside the nested operator
+# ScrollView can land off by the keyboard's height and silently miss —
+# Maestro reports the tap as completed, but the tapped operator never shows
+# its selected highlight and the save persists the original assignment.
+# Dismiss it explicitly before targeting anything inside that nested list.
+- hideKeyboard
+- scrollUntilVisible:
+    element:
+      text: "Operador 10 QA Local"
+    direction: DOWN
+- tapOn: "Operador 10 QA Local"
+- scrollUntilVisible:
+    element:
+      text: "Guardar cambios"
+    direction: DOWN
+- tapOn: "Guardar cambios"
+- extendedWaitUntil:
+    notVisible: "Editar proyecto"
+    timeout: 30000
+# The save just gave this project the newest updated_at of all 30, so it now
+# sorts to the very top of the (freshly reloaded, page-1-only) list — often a
+# long way up from wherever the edit flow left the scroll position. The
+# default scrollUntilVisible timeout (20s) was occasionally too tight to
+# cover that distance; give it more room.
+- scrollUntilVisible:
+    element:
+      text: "Pozo QA Chaco 03"
+    direction: UP
+    timeout: 45000
+- assertVisible: "Operador: Operador 10 QA Local"
+- takeScreenshot: reasignar-proyecto-admin-success

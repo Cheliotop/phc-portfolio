@@ -149,3 +149,17 @@ describe('OperadoresTab', () => {
     expect(showSheet).not.toHaveBeenCalledWith('Error', expect.anything());
   });
 });
+
+it('marks a deleted Auth profile and disables activation/reset controls', async () => {
+  jest.clearAllMocks();
+  await AsyncStorage.setItem('authToken', 'token-for-test');
+  (operatorsApi.getAll as jest.Mock).mockResolvedValue([{ ...serverOperator, auth_available: false, is_active: false }]);
+  (operatorsApi.getAssignedProjectCounts as jest.Mock).mockResolvedValue({});
+  (query as jest.Mock).mockImplementation(async (sql: string) => sql.includes('FROM operators o') ? [{ ...operatorRow, status: 'inactive' }] : []);
+  const view = render(<OperadoresTab />);
+  await waitFor(() => expect(view.getByText('Acceso eliminado')).toBeTruthy());
+  fireEvent.press(view.getByText('Activar'));
+  fireEvent.press(view.getByText('Restablecer clave'));
+  expect(operatorsApi.setActive).not.toHaveBeenCalled();
+  expect(view.queryByTestId('reset-password-input')).toBeNull();
+});

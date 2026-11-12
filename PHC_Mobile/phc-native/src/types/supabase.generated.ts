@@ -2176,6 +2176,10 @@ export type Database = {
       [_ in never]: never
     }
     Functions: {
+      operator_auth_status: {
+        Args: { p_operator_ids: string[] }
+        Returns: { id: string; auth_available: boolean }[]
+      }
       report_rejected_work: {
         Args: {
           p_client_entry_id: string

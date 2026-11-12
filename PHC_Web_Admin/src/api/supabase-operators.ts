@@ -8,7 +8,14 @@ export const operatorsApi = {
       .select('*')
       .order('username');
     if (error) throw friendlyApiError(error, 'No se pudieron cargar los operadores.');
-    return data || [];
+    const rows = data || [];
+    if (!rows.length) return rows;
+    const { data: statuses, error: statusError } = await supabase.rpc('operator_auth_status', {
+      p_operator_ids: rows.map((row: any) => row.id),
+    });
+    if (statusError) throw statusError;
+    const available = new Map((statuses || []).map((row: any) => [row.id, row.auth_available]));
+    return rows.map((row: any) => ({ ...row, auth_available: available.get(row.id) === true }));
   },
 
   async getById(id: string) {

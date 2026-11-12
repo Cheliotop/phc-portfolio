@@ -16,6 +16,7 @@ interface Operator {
   full_name?: string;
   role: string;
   is_active: boolean;
+  auth_available?: boolean;
 }
 
 export const Operadores = () => {
@@ -234,20 +235,21 @@ export const Operadores = () => {
                       <td>{op.full_name || '—'}</td>
                       <td>
                         <span className={`badge ${op.is_active ? 'badge-success' : 'badge-neutral'}`}>
-                          {op.is_active ? 'Activo' : 'Inactivo'}
+                          {op.auth_available === false ? 'Acceso eliminado' : op.is_active ? 'Activo' : 'Inactivo'}
                         </span>
                       </td>
                       <td>
                         <div className="actions-cell">
                           <button
                             className={op.is_active ? 'btn-danger' : 'btn-success'}
-                            disabled={busyId === op.id}
+                            disabled={busyId === op.id || op.auth_available === false}
                             onClick={() => toggleActive(op)}
                           >
                             {busyId === op.id ? '…' : op.is_active ? 'Desactivar' : 'Activar'}
                           </button>
                           <button
                             className="btn-secondary"
+                            disabled={op.auth_available === false}
                             onClick={() => {
                               setResettingId(resettingId === op.id ? null : op.id);
                               setResetPassword('');
@@ -270,7 +272,7 @@ export const Operadores = () => {
                               onChange={(e) => setResetPassword(e.target.value)}
                               style={{ maxWidth: 280 }}
                             />
-                            <button className="btn-success" disabled={busyId === op.id} onClick={() => handleResetPassword(op)}>
+                            <button className="btn-success" disabled={busyId === op.id || op.auth_available === false} onClick={() => handleResetPassword(op)}>
                               {busyId === op.id ? 'Guardando…' : 'Confirmar'}
                             </button>
                           </div>

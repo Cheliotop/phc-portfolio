@@ -1,0 +1,3386 @@
+[
+  {
+    "path": ".github/workflows/db-checks.yml",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": ".github/workflows/mobile-checks.yml",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": ".github/workflows/prod-data-backup.yml",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": true
+  },
+  {
+    "path": ".github/workflows/web-checks.yml",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/.env.example",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/.eslintrc.js",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/.gitignore",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/.idea/.gitignore",
+    "status": "excluded",
+    "reason": "Editor-local metadata"
+  },
+  {
+    "path": "PHC_Mobile/phc-native/.idea/caches/deviceStreaming.xml",
+    "status": "excluded",
+    "reason": "Editor-local metadata"
+  },
+  {
+    "path": "PHC_Mobile/phc-native/.idea/deviceManager.xml",
+    "status": "excluded",
+    "reason": "Editor-local metadata"
+  },
+  {
+    "path": "PHC_Mobile/phc-native/.idea/misc.xml",
+    "status": "excluded",
+    "reason": "Editor-local metadata"
+  },
+  {
+    "path": "PHC_Mobile/phc-native/.idea/modules.xml",
+    "status": "excluded",
+    "reason": "Editor-local metadata"
+  },
+  {
+    "path": "PHC_Mobile/phc-native/.idea/phc-native.iml",
+    "status": "excluded",
+    "reason": "Editor-local metadata"
+  },
+  {
+    "path": "PHC_Mobile/phc-native/.idea/studiobot.xml",
+    "status": "excluded",
+    "reason": "Editor-local metadata"
+  },
+  {
+    "path": "PHC_Mobile/phc-native/.maestro/.gitignore",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/.maestro/crear-operador-admin.yaml",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/.maestro/crear-pedido.yaml",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/.maestro/crear-proyecto-admin.yaml",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/.maestro/iniciar-turno.yaml",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/.maestro/login-admin.yaml",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/.maestro/login-operador.yaml",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/.maestro/navegacion-admin.yaml",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/.maestro/reasignar-proyecto-admin.yaml",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/.maestro/registrar-progreso.yaml",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/App.tsx",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/__mocks__/fileMock.js",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/__tests__/AdminDashboard.test.tsx",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/__tests__/AdminOperadoresTab.test.tsx",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/__tests__/AdminProjectsTabHardening.test.tsx",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/__tests__/CatalogoTab.test.tsx",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/__tests__/CompletionReportsSign.test.tsx",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/__tests__/FichaRefusedAndDraft.test.tsx",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/__tests__/FichaResubmitAndDraftRace.test.tsx",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/__tests__/FichaSignerAndTotals.test.tsx",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/__tests__/LoginScreen.test.tsx",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/__tests__/MaterialesStockLabels.test.tsx",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": true
+  },
+  {
+    "path": "PHC_Mobile/phc-native/__tests__/OperacionTab.test.tsx",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/__tests__/OperatorDashboard.test.tsx",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/__tests__/OperatorIdleLock.test.tsx",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/__tests__/OperatorTabsLocalFirst.test.tsx",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/__tests__/PedidosOffline.test.tsx",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/__tests__/PedidosV2AdminStale.test.tsx",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/__tests__/PozosClosedWellAndSync.test.tsx",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/__tests__/ProgresoSaveInBackground.test.tsx",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/__tests__/ProjectPhotosModal.test.tsx",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/__tests__/ProjectsTabEquipo.test.tsx",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/__tests__/RejectedWorkConfirm.test.tsx",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/__tests__/Sheet.test.tsx",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/__tests__/SyncQueueScrolls.test.tsx",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/__tests__/TurnosTabReport.test.tsx",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/__tests__/_obsolete_pre_supabase/README.md",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/__tests__/adminApiWrappers.test.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/__tests__/adminErrors.test.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/__tests__/adminMaterialsApi.test.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/__tests__/adminOperatorMessages.test.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/__tests__/auditLabels.test.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/__tests__/authLogoutScope.test.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/__tests__/authNavigation.test.tsx",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": true
+  },
+  {
+    "path": "PHC_Mobile/phc-native/__tests__/barOrder.test.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/__tests__/camera.test.tsx",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/__tests__/completionReportsRepository.test.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/__tests__/crashGlobalHandlers.test.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/__tests__/crashReport.test.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/__tests__/database.test.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/__tests__/databaseMigration.test.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/__tests__/dateFormat.test.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/__tests__/designSystem.test.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/__tests__/drainCoordinator.test.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/__tests__/drillingBarNumbering.test.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/__tests__/drillingBarsRepository.test.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/__tests__/drillingSync.test.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/__tests__/engineCompatibility.test.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/__tests__/enteredByRpc.test.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/__tests__/errorMessage.test.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/__tests__/exportCsv.test.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/__tests__/fichaShiftBlockers.test.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/__tests__/fichaStepDecimalComma.test.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/__tests__/fichaStepGate.test.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/__tests__/inputPolish.test.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/__tests__/localSession.test.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/__tests__/materialConsumptionRepository.test.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/__tests__/materialsMirrorPendingUsage.test.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/__tests__/navigation.test.tsx",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/__tests__/offlineSync.test.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/__tests__/operatorDataRefresh.test.tsx",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/__tests__/operatorVault.test.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/__tests__/operatorsRepository.test.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/__tests__/outboxAtomicity.test.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/__tests__/outboxOwner.test.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/__tests__/outboxRetryPolicy.test.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/__tests__/passwordKdf.test.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/__tests__/pedidoMessaging.test.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/__tests__/pedidosQuantityForms.test.tsx",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/__tests__/pedidosRepository.test.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/__tests__/performance.test.tsx",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/__tests__/photoCaptureControls.test.tsx",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/__tests__/photoCopyLifecycle.test.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/__tests__/photoStorage.test.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/__tests__/photoUploadMissingFile.test.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/__tests__/productV2Sync.test.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/__tests__/progresoBarForm.test.tsx",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/__tests__/projectCacheUnassign.test.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/__tests__/projectMaterialsConvergence.test.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/__tests__/projectMaterialsRepository.test.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/__tests__/projectMembership.test.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/__tests__/projectStatus.test.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/__tests__/projectsRepository.test.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/__tests__/quantityParser.test.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/__tests__/queueStatus.test.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/__tests__/rejectedWorkReport.test.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/__tests__/rejectedWorkSentLater.test.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/__tests__/requestDeadline.test.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/__tests__/saveDrainReachability.test.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/__tests__/serverClosedShifts.test.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/__tests__/sessionSurvivesOutage.test.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/__tests__/sessionValidity.test.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/__tests__/shiftCutoff.test.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/__tests__/shiftJoin.test.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/__tests__/shiftStartRules.test.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/__tests__/shiftsOnWellAndFichaSync.test.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/__tests__/shiftsRepository.test.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/__tests__/signedInOperatorRow.test.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/__tests__/supabaseSessionLifecycle.test.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/__tests__/supplyRequestsRepository.test.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/__tests__/syncRejection.test.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/__tests__/time.test.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/__tests__/transactionConnection.test.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/__tests__/turnosCrewShift.test.tsx",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/__tests__/turnosUsageQuantity.test.tsx",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/__tests__/useBiometricAuth.test.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/__tests__/useFormDraft.test.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/__tests__/useSessionRestore.test.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/__tests__/waterSampleOrder.test.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/__tests__/waterSamplePhotoCaption.test.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/__tests__/waterSamplesRepository.test.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/android/.gitignore",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/android/app/build.gradle",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/android/app/proguard-rules.pro",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/android/app/src/debug/AndroidManifest.xml",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/android/app/src/debugOptimized/AndroidManifest.xml",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/android/app/src/main/AndroidManifest.xml",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/android/app/src/main/java/com/sergioclaudecode/PHCmobile/MainActivity.kt",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/android/app/src/main/java/com/sergioclaudecode/PHCmobile/MainApplication.kt",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/android/app/src/main/res/drawable-hdpi/splashscreen_logo.png",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/android/app/src/main/res/drawable-mdpi/splashscreen_logo.png",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/android/app/src/main/res/drawable-xhdpi/splashscreen_logo.png",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/android/app/src/main/res/drawable-xxhdpi/splashscreen_logo.png",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/android/app/src/main/res/drawable-xxxhdpi/splashscreen_logo.png",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/android/app/src/main/res/drawable/ic_launcher_background.xml",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/android/app/src/main/res/drawable/rn_edit_text_material.xml",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/android/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/android/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/android/app/src/main/res/mipmap-hdpi/ic_launcher.webp",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/android/app/src/main/res/mipmap-hdpi/ic_launcher_foreground.webp",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/android/app/src/main/res/mipmap-hdpi/ic_launcher_round.webp",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/android/app/src/main/res/mipmap-mdpi/ic_launcher.webp",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/android/app/src/main/res/mipmap-mdpi/ic_launcher_foreground.webp",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/android/app/src/main/res/mipmap-mdpi/ic_launcher_round.webp",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/android/app/src/main/res/mipmap-xhdpi/ic_launcher.webp",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/android/app/src/main/res/mipmap-xhdpi/ic_launcher_foreground.webp",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/android/app/src/main/res/mipmap-xhdpi/ic_launcher_round.webp",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/android/app/src/main/res/mipmap-xxhdpi/ic_launcher.webp",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/android/app/src/main/res/mipmap-xxhdpi/ic_launcher_foreground.webp",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/android/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.webp",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.webp",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher_foreground.webp",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.webp",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/android/app/src/main/res/values-night/colors.xml",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/android/app/src/main/res/values/colors.xml",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/android/app/src/main/res/values/strings.xml",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/android/app/src/main/res/values/styles.xml",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/android/app/src/main/res/xml/backup_rules.xml",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/android/app/src/main/res/xml/data_extraction_rules.xml",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/android/build.gradle",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/android/gradle.properties",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/android/gradle/wrapper/gradle-wrapper.jar",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/android/gradle/wrapper/gradle-wrapper.properties",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/android/gradlew",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/android/gradlew.bat",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/android/settings.gradle",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/app.json",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/assets/adaptive-icon.png",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/assets/app-icon-adaptive-foreground-source.svg",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/assets/app-icon-round-source.svg",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/assets/app-icon-source.svg",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/assets/favicon.png",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/assets/icon.png",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/assets/phc-logo.png",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/assets/splash-icon.png",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/babel.config.js",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/index.js",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/index.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/jest.config.js",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/jest.globalSetup.js",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/jest.setup.js",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/login-operador-success.png",
+    "status": "excluded",
+    "reason": "Operational screenshot"
+  },
+  {
+    "path": "PHC_Mobile/phc-native/metro.config.js",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/offline-min-saved.png",
+    "status": "excluded",
+    "reason": "Operational screenshot"
+  },
+  {
+    "path": "PHC_Mobile/phc-native/offline-pedido-saved.png",
+    "status": "excluded",
+    "reason": "Operational screenshot"
+  },
+  {
+    "path": "PHC_Mobile/phc-native/package-lock.json",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/package.json",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/probe-result.png",
+    "status": "excluded",
+    "reason": "Operational screenshot"
+  },
+  {
+    "path": "PHC_Mobile/phc-native/scripts/check-java.js",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/scripts/copy-android-artifact.js",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/scripts/create-android-signing-key.js",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/scripts/validate-android-local-qa.js",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/scripts/validate-android-release.js",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": true
+  },
+  {
+    "path": "PHC_Mobile/phc-native/src/api/adminResetOperatorPassword.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/src/api/adminStats.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/src/api/authFailure.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/src/api/biometricSession.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/src/api/config.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": true
+  },
+  {
+    "path": "PHC_Mobile/phc-native/src/api/localSession.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/src/api/pedidosCache.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/src/api/photoErrors.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/src/api/projectCache.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/src/api/queryClient.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": true
+  },
+  {
+    "path": "PHC_Mobile/phc-native/src/api/supabase-auth.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/src/api/supabase-client.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/src/api/supabase-completion.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/src/api/supabase-drilling-bars.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/src/api/supabase-materials.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/src/api/supabase-operators.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/src/api/supabase-pedidos.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/src/api/supabase-photos.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/src/api/supabase-product-v2.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/src/api/supabase-projects.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/src/api/supabase-rejected-work.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/src/api/supabase-shifts.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/src/api/supabase-water-samples.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/src/components/CleanupScreen.tsx",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/src/components/admin/AdminHeader.tsx",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/src/components/admin/CatalogoTab.tsx",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/src/components/admin/CompletionReportsTab.tsx",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/src/components/admin/OperacionTab.tsx",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/src/components/admin/OperadoresTab.tsx",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/src/components/admin/OverviewTab.tsx",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/src/components/admin/PedidosV2AdminTab.tsx",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/src/components/admin/ProjectPhotosModal.tsx",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/src/components/admin/ProjectsTab.tsx",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/src/components/admin/RejectedWorkTab.tsx",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/src/components/admin/adminSharedStyles.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/src/components/admin/operatorMessages.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/src/components/operator/FichaTecnicaTab.tsx",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/src/components/operator/MaterialesTab.tsx",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/src/components/operator/PedidosV2Tab.tsx",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/src/components/operator/PozosTab.tsx",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/src/components/operator/ProgresoTab.tsx",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/src/components/operator/TurnosTab.tsx",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/src/components/operator/WaterSamplesTab.tsx",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/src/components/operator/closedWellNotice.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/src/components/shared/ErrorBoundary.tsx",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": true
+  },
+  {
+    "path": "PHC_Mobile/phc-native/src/components/shared/OperatorIdleLock.tsx",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/src/components/shared/PHCLogo.tsx",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/src/components/shared/PhotoCapture.tsx",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/src/components/shared/Sheet.tsx",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/src/components/shared/SyncStatusIndicator.tsx",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/src/components/shared/ui.tsx",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/src/db/db.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/src/db/index.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/src/db/init.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/src/db/migrations.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": true
+  },
+  {
+    "path": "PHC_Mobile/phc-native/src/db/migrations/0001_init.sql",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/src/db/migrations/0001_init.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": true
+  },
+  {
+    "path": "PHC_Mobile/phc-native/src/db/migrations/0006_product_foundation.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/src/db/migrations/0007_shift_outbox_state.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/src/db/migrations/0008_material_consumption_identity.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/src/db/migrations/0009_secondary_operator_assignments.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/src/db/migrations/0010_rejected_work_archive.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/src/db/migrations/0011_outbox_author_and_shift_join.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/src/db/operations.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/src/db/projectMembership.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": true
+  },
+  {
+    "path": "PHC_Mobile/phc-native/src/db/repositories/completionReports.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/src/db/repositories/drillingBars.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/src/db/repositories/materialConsumption.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/src/db/repositories/operators.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/src/db/repositories/pedidos.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/src/db/repositories/projectMaterials.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/src/db/repositories/projects.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/src/db/repositories/shifts.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/src/db/repositories/supplyRequests.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/src/db/repositories/waterSamples.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/src/db/schema.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/src/db/seedData.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": true
+  },
+  {
+    "path": "PHC_Mobile/phc-native/src/domain/accountRules.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/src/domain/adminErrors.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/src/domain/auditLabels.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/src/domain/pedidoMessaging.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/src/domain/projectStatus.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/src/domain/rejectedWork.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/src/events/operatorDataEvents.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/src/events/queueEvents.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/src/hooks/useBiometricAuth.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/src/hooks/useFormDraft.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/src/hooks/useOperatorDataRefresh.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/src/hooks/useSessionRestore.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/src/hooks/useTheme.tsx",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/src/lib/supabase.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/src/navigation/RoleGuard.tsx",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/src/navigation/types.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/src/screens/AdminDashboard.tsx",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/src/screens/LoginScreen.tsx",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/src/screens/OperatorDashboard.tsx",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/src/sync/drainCoordinator.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/src/sync/drillingSync.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/src/sync/fichaShiftBlockers.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/src/sync/offlineSync.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/src/sync/outboxOwner.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/src/sync/productV2Sync.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/src/sync/queueStatus.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/src/sync/rejectedStart.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/src/sync/rejectedWorkReport.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/src/sync/rejection.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/src/sync/serverBarsCache.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/src/sync/serverClosedShifts.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/src/sync/sessionValidity.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/src/sync/shiftCutoff.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/src/sync/shiftDependencies.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/src/sync/shiftJoin.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/src/sync/startShift.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/src/theme/phcTheme.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/src/types/database.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": true
+  },
+  {
+    "path": "PHC_Mobile/phc-native/src/types/env.d.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/src/types/productV2.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/src/types/supabase.generated.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/src/utils/adminListPdf.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/src/utils/auditLog.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": true
+  },
+  {
+    "path": "PHC_Mobile/phc-native/src/utils/clientId.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/src/utils/crashReport.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/src/utils/dateFormat.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/src/utils/device.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/src/utils/errorMessage.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/src/utils/escapeHtml.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/src/utils/exportCsv.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": true
+  },
+  {
+    "path": "PHC_Mobile/phc-native/src/utils/feedback.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/src/utils/imageCompression.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": true
+  },
+  {
+    "path": "PHC_Mobile/phc-native/src/utils/log.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": true
+  },
+  {
+    "path": "PHC_Mobile/phc-native/src/utils/motion.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/src/utils/operatorVault.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/src/utils/passwordKdf.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/src/utils/photoStorage.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/src/utils/productV2Json.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/src/utils/quantity.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/src/utils/time.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/tsconfig.json",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Web_Admin/.gitignore",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Web_Admin/.oxlintrc.json",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Web_Admin/README.md",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Web_Admin/api/keepalive.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Web_Admin/icon-source.svg",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Web_Admin/index.html",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Web_Admin/package-lock.json",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Web_Admin/package.json",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Web_Admin/public/favicon-32.png",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Web_Admin/public/icon-192.png",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Web_Admin/public/icon-512.png",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Web_Admin/public/manifest.webmanifest",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Web_Admin/public/sw.js",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Web_Admin/src/App.css",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Web_Admin/src/App.tsx",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Web_Admin/src/api/adminCreateOperator.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Web_Admin/src/api/adminResetOperatorPassword.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Web_Admin/src/api/adminStats.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Web_Admin/src/api/supabase-api-errors.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Web_Admin/src/api/supabase-catalog.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Web_Admin/src/api/supabase-completion.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Web_Admin/src/api/supabase-drilling-bars.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Web_Admin/src/api/supabase-materials.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Web_Admin/src/api/supabase-operator-projects.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Web_Admin/src/api/supabase-operator-session.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Web_Admin/src/api/supabase-operator.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Web_Admin/src/api/supabase-operators.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Web_Admin/src/api/supabase-pedidos.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Web_Admin/src/api/supabase-product-projects.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Web_Admin/src/api/supabase-projects.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Web_Admin/src/api/supabase-rejected-work.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Web_Admin/src/api/supabase-shifts.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Web_Admin/src/api/supabase-water-samples.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Web_Admin/src/assets/hero.png",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Web_Admin/src/assets/react.svg",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Web_Admin/src/assets/vite.svg",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Web_Admin/src/auth/AuthProvider.tsx",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Web_Admin/src/auth/auth-context.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Web_Admin/src/components/Catalogo.tsx",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Web_Admin/src/components/ChangePassword.tsx",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Web_Admin/src/components/Cierres.tsx",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Web_Admin/src/components/Dashboard.tsx",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Web_Admin/src/components/Login.tsx",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Web_Admin/src/components/Operacion.tsx",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Web_Admin/src/components/Operadores.tsx",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Web_Admin/src/components/Pedidos.tsx",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Web_Admin/src/components/Proyectos.tsx",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Web_Admin/src/components/Revision.tsx",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Web_Admin/src/components/StatusBadge.tsx",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Web_Admin/src/components/operator/OperatorConsole.tsx",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Web_Admin/src/domain/accountRules.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Web_Admin/src/domain/budgetImport.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Web_Admin/src/domain/cierresGuards.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Web_Admin/src/domain/correctionPreview.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Web_Admin/src/domain/correctionValue.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Web_Admin/src/domain/dashboardFeed.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Web_Admin/src/domain/dashboardLoad.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Web_Admin/src/domain/dossierCrew.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Web_Admin/src/domain/forceClose.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Web_Admin/src/domain/metricsPeriod.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Web_Admin/src/domain/operatorDeactivation.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Web_Admin/src/domain/operatorTeam.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Web_Admin/src/domain/paging.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Web_Admin/src/domain/paraguayNumber.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Web_Admin/src/domain/pedidoDecisionNotice.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Web_Admin/src/domain/projectEdit.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Web_Admin/src/domain/projectStatus.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Web_Admin/src/domain/rejectedWork.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Web_Admin/src/domain/revisionAuthorship.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Web_Admin/src/domain/supabaseKey.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Web_Admin/src/domain/unitChange.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Web_Admin/src/hooks/useAuth.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Web_Admin/src/hooks/useHashRoute.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Web_Admin/src/index.css",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Web_Admin/src/lib/supabase.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": true
+  },
+  {
+    "path": "PHC_Web_Admin/src/main.tsx",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Web_Admin/src/routing/hashRoute.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Web_Admin/src/types/completionReview.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Web_Admin/src/types/operatorConsole.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Web_Admin/src/types/productV2.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Web_Admin/src/utils/exportCsv.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Web_Admin/src/utils/parseDecimal.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Web_Admin/src/utils/printableDossier.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Web_Admin/src/utils/printableLists.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Web_Admin/tests/apiErrors.test.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Web_Admin/tests/authSignOut.test.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Web_Admin/tests/budgetImport.test.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Web_Admin/tests/buildCsv.test.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Web_Admin/tests/cierresGuards.test.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Web_Admin/tests/correctionPreview.test.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Web_Admin/tests/correctionValue.test.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Web_Admin/tests/dashboardFeed.test.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Web_Admin/tests/dashboardLoad.test.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Web_Admin/tests/dossierCrew.test.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Web_Admin/tests/forceClose.test.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Web_Admin/tests/hashRoute.test.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Web_Admin/tests/keepalive.test.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": true
+  },
+  {
+    "path": "PHC_Web_Admin/tests/metricsPeriod.test.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Web_Admin/tests/operatorDeactivation.test.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Web_Admin/tests/operatorTeam.test.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Web_Admin/tests/paging.test.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Web_Admin/tests/paraguayNumber.test.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Web_Admin/tests/parseDecimal.test.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Web_Admin/tests/pedidoDecisionNotice.test.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Web_Admin/tests/printableDossier.test.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Web_Admin/tests/printableLists.test.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Web_Admin/tests/projectEdit.test.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Web_Admin/tests/rejectionReason.test.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Web_Admin/tests/revisionAuthorship.test.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Web_Admin/tests/supabaseKey.test.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": true
+  },
+  {
+    "path": "PHC_Web_Admin/tests/unitChange.test.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Web_Admin/tsconfig.app.json",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Web_Admin/tsconfig.json",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Web_Admin/tsconfig.node.json",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Web_Admin/vercel.json",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": true
+  },
+  {
+    "path": "PHC_Web_Admin/vite.config.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "scripts/build-local-qa-apk.command",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "scripts/build-local-qa-apk.sh",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "scripts/build-production-aab.sh",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "scripts/build-production-apk.sh",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "scripts/run-local-qa-smoke.command",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "scripts/run-local-qa-smoke.sh",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "scripts/smoke-local-qa-backend.js",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "scripts/start-local-qa-backend.command",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "scripts/start-local-qa-backend.sh",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "supabase/.gitignore",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "supabase/01_schema.sql",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "supabase/02_rls_policies.sql",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "supabase/backups/generate-data-backup.sql",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "supabase/config.toml",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "supabase/functions/_shared/keys.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "supabase/functions/admin-create-operator/index.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": true
+  },
+  {
+    "path": "supabase/functions/admin-delete-project-attachment/index.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "supabase/functions/admin-reset-operator-password/index.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "supabase/functions/notify-email/index.ts",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "supabase/migrations/20260708000000_phc_baseline_schema.sql",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "supabase/migrations/20260708225828_phc_rpc_functions.sql",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": true
+  },
+  {
+    "path": "supabase/migrations/20260708225908_phc_rls_role_and_perf_fixes.sql",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": true
+  },
+  {
+    "path": "supabase/migrations/20260708225948_phc_rpc_revoke_anon_execute.sql",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": true
+  },
+  {
+    "path": "supabase/migrations/20260708230435_phc_storage_photos_policies.sql",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": true
+  },
+  {
+    "path": "supabase/migrations/20260708231611_phc_reports_storage_bucket.sql",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": true
+  },
+  {
+    "path": "supabase/migrations/20260708231655_phc_owner_column_defaults.sql",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": true
+  },
+  {
+    "path": "supabase/migrations/20260708232125_phc_idempotency_columns.sql",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": true
+  },
+  {
+    "path": "supabase/migrations/20260709050323_phc_profile_privilege_guard.sql",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": true
+  },
+  {
+    "path": "supabase/migrations/20260709051045_phc_is_admin_security_definer.sql",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": true
+  },
+  {
+    "path": "supabase/migrations/20260709051209_phc_function_execute_grants.sql",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": true
+  },
+  {
+    "path": "supabase/migrations/20260709102334_phc_admin_pedido_and_completion_rpcs.sql",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": true
+  },
+  {
+    "path": "supabase/migrations/20260710120710_fix_storage_project_folder_rls.sql",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "supabase/migrations/20260710120825_fix_storage_project_folder_rls_v2.sql",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "supabase/migrations/20260710134157_block_writes_on_completed_projects.sql",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "supabase/migrations/20260710142502_remove_warehouse_stock_direct_project_assignment.sql",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "supabase/migrations/20260710161531_handoff_hardening_grants_and_delete_policy.sql",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "supabase/migrations/20260711102930_phc_product_plan_v2.sql",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "supabase/migrations/20260712130919_phc_product_plan_v2_hardening_operator_web.sql",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "supabase/migrations/20260712204006_phc_adversarial_integrity_hardening.sql",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "supabase/migrations/20260712220500_phc_start_shift_replay_projection.sql",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "supabase/migrations/20260713214048_fix_photo_storage_insert_policy.sql",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "supabase/migrations/20260713223443_phc_closed_shift_offline_bar_replay.sql",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "supabase/migrations/20260717164828_phc_pedido_crew_handoff_visibility.sql",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "supabase/migrations/20260717205309_phc_crew_handoff_continuity_personal_privacy.sql",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "supabase/migrations/20260718000521_phc_material_consumption_crew_handoff_continuity.sql",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "supabase/migrations/20260720000000_phc_restore_auth_user_trigger.sql",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "supabase/migrations/20260724221000_phc_fix_errcode_55000_postgrest_accents_bug.sql",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "supabase/migrations/20260725120000_phc_photos_storage_bucket.sql",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "supabase/migrations/20260725140000_phc_recompute_project_progress.sql",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "supabase/migrations/20260725160000_phc_secondary_operators.sql",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "supabase/migrations/20260726000000_phc_server_side_shift_reaper.sql",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "supabase/migrations/20260726010000_phc_revoke_anon_on_membership_helpers.sql",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "supabase/migrations/20260726020000_phc_in_database_snapshots.sql",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "supabase/migrations/20260728204106_phc_handoff_audit_hardening.sql",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "supabase/migrations/20260731210000_phc_client_error_reports.sql",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "supabase/migrations/20260801120000_phc_delete_unused_operator.sql",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "supabase/migrations/20260801123000_phc_delete_operator_privilege_guard.sql",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "supabase/migrations/20260801150000_phc_secondary_operator_write_policies.sql",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "supabase/migrations/20260801180000_phc_drop_expired_photo_legacy_branch.sql",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "supabase/migrations/20260909000000_phc_capture_production_drift.sql",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "supabase/migrations/20261030230000_phc_full_audit_fixes.sql",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "supabase/migrations/20261105120000_phc_rejected_work_review.sql",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "supabase/migrations/20261106120000_phc_shift_no_overlap.sql",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "supabase/migrations/20261107120000_phc_shift_end_server_clock.sql",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "supabase/migrations/20261107130000_phc_shift_force_close.sql",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "supabase/migrations/20261108120000_phc_shift_end_after_sweep.sql",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "supabase/migrations/20261108130000_phc_force_closed_bars.sql",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "supabase/migrations/20261108140000_phc_rejected_work_sent_later.sql",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "supabase/migrations/20261108150000_phc_shift_end_material_changes.sql",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "supabase/migrations/20261109120000_phc_reconciliation_tolerance.sql",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "supabase/migrations/20261109130000_phc_rejected_work_guard.sql",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "supabase/migrations/20261109140000_phc_equipo_crew.sql",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "supabase/migrations/20261109160000_phc_server_medium_sweep.sql",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "supabase/migrations/20261110100000_phc_server_low_sweep.sql",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "supabase/migrations/20261111213048_phc_current_assignment_reads.sql",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "supabase/migrations/20261111214621_phc_project_notification_scope.sql",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "supabase/migrations_backup_2026-07-10_pre-reconcile/20260709050323_phc_profile_privilege_guard.sql",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": true
+  },
+  {
+    "path": "supabase/migrations_backup_2026-07-10_pre-reconcile/20260709051500_phc_is_admin_security_definer.sql",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": true
+  },
+  {
+    "path": "supabase/migrations_backup_2026-07-10_pre-reconcile/20260709052200_phc_function_execute_grants.sql",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": true
+  },
+  {
+    "path": "supabase/migrations_backup_2026-07-10_pre-reconcile/20260709063000_phc_admin_pedido_and_completion_rpcs.sql",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": true
+  },
+  {
+    "path": "supabase/rollback/20260726_rollback_prod_push.sql",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "supabase/seed/README.md",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": true
+  },
+  {
+    "path": "supabase/seed/audit-fixes-2026-10-30.sql",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "supabase/seed/closure-audit.js",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "supabase/seed/current-assignment-reads.sql",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "supabase/seed/edge-functions-audit.js",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "supabase/seed/equipo-crew.sql",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "supabase/seed/integrity-audit.js",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": true
+  },
+  {
+    "path": "supabase/seed/mint-local-jwt.js",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": true
+  },
+  {
+    "path": "supabase/seed/production-preflight.sql",
+    "status": "excluded",
+    "reason": "Private deployment-specific preflight; replaced by portable setup documentation"
+  },
+  {
+    "path": "supabase/seed/reconciliation-tolerance.sql",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "supabase/seed/rejected-work-guard.sql",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "supabase/seed/rejected-work-review.sql",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "supabase/seed/rls-audit.js",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": true
+  },
+  {
+    "path": "supabase/seed/seed-local.js",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "supabase/seed/server-low-sweep.sql",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "supabase/seed/server-medium-sweep.sql",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "supabase/seed/shift-end-and-force-close.sql",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "supabase/seed/shift-no-overlap.sql",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "supabase/migrations/20261112093524_phc_operator_auth_lifecycle.sql",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "supabase/seed/operator-auth-lifecycle.sql",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "scripts/acceptance/run.cjs",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": true
+  },
+  {
+    "path": "scripts/acceptance/android-ui.py",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": true
+  },
+  {
+    "path": "scripts/acceptance/android-created-operator.py",
+    "status": "included",
+    "source": "working tree",
+    "sanitized": false
+  },
+  {
+    "path": "PHC_Mobile/phc-native/android/gradle/wrapper/gradle-wrapper.jar",
+    "status": "included",
+    "source": "local build tooling",
+    "sanitized": false
+  }
+]

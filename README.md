@@ -15,6 +15,20 @@ la conexión a Internet es poco confiable.
 > la recuperación independiente y el piloto completo en un pozo real. Esta copia
 > anonimizada es para revisión técnica y no está conectada al entorno del cliente.
 
+## Contenido completo
+
+Incluye la aplicación Android con proyecto nativo y recursos, panel web, Edge
+Functions, las 58 migraciones actuales, fixtures sintéticos, suites de pruebas,
+scripts de build/aceptación y configuración de despliegue. Incluye también los
+cambios locales de cuentas que todavía no estaban en el GitHub privado.
+
+[Instalación en un entorno propio](docs/SETUP.md) ·
+[Inventario de archivos de origen](docs/SOURCE_INVENTORY.json)
+
+Los secretos, datos reales, backups operativos y archivos generados se sustituyen
+por configuración propia y datos sintéticos. No son requisitos para revisar o
+reconstruir las funciones del sistema.
+
 ## Mi participación
 
 Soy Sergio. No me presento como programador tradicional: actualmente no sé escribir

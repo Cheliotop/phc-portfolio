@@ -1,0 +1,29 @@
+appId: com.sergioclaudecode.PHCmobile
+---
+- runFlow: login-admin.yaml
+- assertVisible: "Panel de Control"
+- tapOn: "Proyectos"
+- extendedWaitUntil:
+    visible: "Todos los Proyectos"
+    timeout: 30000
+- tapOn: "Catálogo"
+- extendedWaitUntil:
+    visible: "Catálogo de Materiales"
+    timeout: 30000
+- tapOn: "Operación"
+- extendedWaitUntil:
+    visible: "Filtros"
+    timeout: 30000
+- tapOn: "Operadores"
+- extendedWaitUntil:
+    visible: "Gestión de Operadores"
+    timeout: 30000
+- tapOn: "Pedidos"
+- extendedWaitUntil:
+    visible: "Decisiones por ítem y seguimiento de entregas"
+    timeout: 30000
+- tapOn: "Cierres"
+- extendedWaitUntil:
+    visible: "Informes de Cierre"
+    timeout: 30000
+- takeScreenshot: navegacion-admin-success

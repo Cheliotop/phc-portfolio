@@ -1,0 +1,51 @@
+appId: com.sergioclaudecode.PHCmobile
+---
+- runFlow: login-operador.yaml
+- tapOn: "Progreso"
+- extendedWaitUntil:
+    visible: "Registro de Progreso"
+    timeout: 30000
+- tapOn: "Materiales"
+- extendedWaitUntil:
+    visible: "Materiales"
+    timeout: 30000
+- tapOn: "Pedidos"
+- extendedWaitUntil:
+    visible: "Aprobación y recepción son pasos separados."
+    timeout: 30000
+- tapOn: "+ Nuevo"
+- assertVisible: "Nuevo pedido"
+- tapOn:
+    below: "Pozo *"
+- tapOn: "${PHC_PROJECT_NAME}"
+- assertVisible: "${PHC_PROJECT_NAME}"
+- tapOn: "Motivo operativo"
+- inputText: "${PHC_PEDIDO_JUSTIFICATION}"
+- tapOn: "Material o equipo"
+- inputText: "${PHC_PEDIDO_MATERIAL}"
+- hideKeyboard
+- scrollUntilVisible:
+    element:
+      text: "Cantidad"
+    direction: DOWN
+- tapOn: "Cantidad"
+- inputText: "${PHC_PEDIDO_QUANTITY}"
+- hideKeyboard
+- scrollUntilVisible:
+    element:
+      text: "Guardar pedido"
+    direction: DOWN
+- tapOn: "Guardar pedido"
+- extendedWaitUntil:
+    visible: "Pedido guardado"
+    timeout: 30000
+- assertVisible: "El pedido de Empresa fue enviado. La aprobación no cambia inventario; se actualiza únicamente cuando confirmes la recepción."
+- tapOn: "Entendido"
+- extendedWaitUntil:
+    visible: "${PHC_PEDIDO_MATERIAL}"
+    timeout: 30000
+- assertVisible: "${PHC_PROJECT_NAME} · Empresa"
+- assertVisible: "${PHC_PEDIDO_JUSTIFICATION}"
+- assertVisible: "Solicitado ${PHC_PEDIDO_QUANTITY} unidad"
+- assertVisible: "solicitado"
+- takeScreenshot: crear-pedido-success

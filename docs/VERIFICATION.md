@@ -1,40 +1,26 @@
-# Verificación y pendientes
+# Verificación de la distribución completa
 
-**CI con instalación limpia: PASS móvil y web.**
-[GitHub Actions, ejecución 43329874537](https://github.com/Cheliotop/phc-portfolio/actions/runs/43329874537)
-ejecutó `npm ci`, TypeScript y todas las pruebas móviles con Node22, y `npm ci`,
-pruebas y build web con Node24. El código de aplicación verificado no cambia en
-la actualización de documentación que registra este resultado.
+12 de noviembre de2026, fuente local actual con cambios pendientes incluidos.
 
-Comprobaciones locales previas sobre esta copia, 12 de noviembre de 2026:
-
-| Comprobación | Resultado |
+| Comprobación local | Resultado |
 |---|---|
 | Móvil `npm run typecheck` | PASS |
-| Móvil `npm test -- --runInBand --silent` | 107 suites / 759 pruebas pasaron; 1 prueba falló por configuración nativa excluida |
-| Corrección de empaquetado + `npm test -- --runInBand --silent __tests__/engineCompatibility.test.ts` | 1 suite / 3 pruebas PASS; incluye la prueba antes fallida |
-| Web `npm test` | 27 archivos de prueba PASS, 0 fallos en este runtime |
+| Móvil `npm test -- --runInBand --silent` | 108 suites, 762 pruebas PASS |
+| Web `npm test` | PASS |
 | Web `npm run build` | PASS |
+| Carga dinámica de clave del contenedor Auth local | PASS; sin imprimir claves |
+| Sintaxis de helpers JS/Python | PASS |
+| Escaneo de secretos/identificador productivo | Sin coincidencias bloqueantes |
 
-Las dependencias instaladas del proyecto local se reutilizaron mediante enlaces
-ignorados por Git; no se ejecutó una instalación limpia con los lockfiles durante
-esta comprobación. La versión local de Node fue 26.7.0. CI se configura por separado
-para instalar desde los lockfiles. No sumar los 3 tests del rerun a los 760 del
-conjunto completo: se superponen. No se ejecutaron pruebas SQL ni un piloto físico
-durante esta preparación.
+Se reutilizaron dependencias locales para estas comprobaciones. Los workflows
+móvil/web/base de datos incluidos ejecutan instalaciones limpias y reconstrucción
+de base local en GitHub Actions. Ver el resultado del commit actual en Actions;
+el pase anterior de la muestra reducida no demuestra esta revisión completa.
 
-La aplicación publicada anteriormente tenía CI móvil/web/base de datos exitoso,
-pero ese resultado corresponde a otra revisión. El estado de Actions en esta
-publicación será evidencia propia cuando se ejecute.
+No se compiló un APK nuevo ni se probó un dispositivo físico durante esta preparación.
+Los recursos y wrapper necesarios están incluidos, pero una build Android requiere
+SDK/JDK y claves propias. No se verificó un despliegue nuevo de Vercel ni la entrega
+de correo. El producto sigue pendiente de aceptación completa en campo.
 
-## Límites conocidos
-
-- Dos migraciones de seguridad presentes en esta copia aún no están desplegadas.
-- El entorno privado tiene cambios adicionales de cuentas sin commit, excluidos aquí.
-- Siguen pendientes aceptación en dispositivo físico y un pozo real completo.
-- Expiración de sesión y carreras entre cambio de cuenta, refresh y sincronización
-  necesitan más verificación en flujos reales.
-- Un backup exitoso no demuestra recuperación completa de Auth, archivos y claves.
-- Entrega de correo con dominio verificado y transferencia de hosting siguen abiertas.
-- El build web prueba compilación; no es prueba de login o interacción con un
-  backend nuevo. Esta muestra no ofrece un demo público conectado.
+Las tres migraciones más recientes del código local no están confirmadas como
+aplicadas al backend productivo. La copia pública no cambia el backend del cliente.

@@ -32,6 +32,7 @@ interface Operator {
   role: string;
   status: string;
   assigned_projects: number;
+  authAvailable?: boolean;
   created_at: string;
 }
 
@@ -138,6 +139,7 @@ const OperadoresTab = () => {
         for (const operator of result) {
           operator.assigned_projects = assignedProjectCounts[String(operator.id)] || 0;
           operator.username = usernameById.get(String(operator.id)) || undefined;
+          operator.authAvailable = serverOperators?.find((row) => String(row.id) === String(operator.id))?.auth_available;
         }
 
         setOperators((current) => {
@@ -520,7 +522,7 @@ const OperadoresTab = () => {
                 </View>
                 <View style={[styles.statusBadge, { backgroundColor: getStatusColor(operator.status) }]}>
                   <Text style={styles.statusText}>
-                    {operator.status === 'active' ? 'Activo' : 'Inactivo'}
+                    {operator.authAvailable === false ? 'Acceso eliminado' : operator.status === 'active' ? 'Activo' : 'Inactivo'}
                   </Text>
                 </View>
               </View>
@@ -539,6 +541,7 @@ const OperadoresTab = () => {
                       styles.actionButton,
                       { backgroundColor: operator.status === 'active' ? COLORS.danger : COLORS.success }
                     ]}
+                    disabled={operator.authAvailable === false}
                     onPress={() => handleToggleStatus(operator.id, operator.status)}
                   >
                     <Text style={styles.actionButtonText}>
@@ -547,6 +550,7 @@ const OperadoresTab = () => {
                   </TouchableOpacity>
                   <TouchableOpacity
                     style={[styles.actionButton, { backgroundColor: COLORS.primary, marginLeft: SPACING.sm }]}
+                    disabled={operator.authAvailable === false}
                     onPress={() => {
                       setResettingId(resettingId === operator.id ? null : operator.id);
                       setResetPassword('');

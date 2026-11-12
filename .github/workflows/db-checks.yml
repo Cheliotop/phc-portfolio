@@ -1,0 +1,85 @@
+# Database checks (audit AUTH-9, 2026-11-09): every migration from scratch on a local
+# Supabase stack, the QA seed, and every audit suite under supabase/seed/. Until this
+# workflow, nothing ran these tests except a person on the workstation.
+#
+# Local stack only: the seed and suites refuse any URL but 127.0.0.1. Nothing here
+# touches production or needs a secret.
+name: database checks
+
+on:
+  push:
+    branches: ['**']
+    paths:
+      - 'supabase/**'
+      - '.github/workflows/db-checks.yml'
+  pull_request:
+    paths:
+      - 'supabase/**'
+      - '.github/workflows/db-checks.yml'
+  workflow_dispatch:
+
+concurrency:
+  group: db-checks-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      DB: postgresql://postgres:postgres@127.0.0.1:54322/postgres
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      # The version the suites were last run with on the workstation. The seed's token
+      # minter signs with this CLI's built-in local key. v3 rejects [inbucket] in
+      # config.toml (see prod-data-backup.yml), so don't move to it blindly.
+      - uses: supabase/setup-cli@v1
+        with:
+          version: 2.117.0
+
+      - name: Start the local stack (applies every migration)
+        run: supabase start -x studio,imgproxy,logflare,vector,supavisor,edge-runtime,realtime,postgres-meta
+
+      - name: QA seed
+        working-directory: supabase/seed
+        run: |
+          TOKEN=$(node mint-local-jwt.js | grep -o 'TOKEN=.*' | cut -d= -f2-)
+          test -n "$TOKEN"
+          echo "::add-mask::$TOKEN"
+          echo "PHC_LOCAL_SUPABASE_PUBLISHABLE_KEY=$TOKEN" >> "$GITHUB_ENV"
+          echo "PHC_LOCAL_SUPABASE_SECRET_KEY=$TOKEN" >> "$GITHUB_ENV"
+          PHC_LOCAL_SUPABASE_PUBLISHABLE_KEY="$TOKEN" PHC_LOCAL_SUPABASE_SECRET_KEY="$TOKEN" node seed-local.js
+
+      # Same order as on the workstation: the JS suites first (closure-audit completes
+      # one seeded well), then the SQL suites, each rolled back.
+      - name: JS audit suites
+        working-directory: supabase/seed
+        run: |
+          status=0
+          for f in rls-audit.js integrity-audit.js closure-audit.js; do
+            out=$(node "$f" 2>&1) || true
+            last=$(printf '%s\n' "$out" | grep -E 'passed' | tail -n 1)
+            echo "$f: $last"
+            if ! printf '%s' "$last" | grep -qE ' 0 FAILED$'; then printf '%s\n' "$out" | tail -n 40; status=1; fi
+          done
+          exit $status
+
+      - name: SQL suites
+        working-directory: supabase/seed
+        run: |
+          status=0
+          for f in *.sql; do
+            # The production preflight is a read-only check for the rollout, not a suite.
+            [ "$f" = production-preflight.sql ] && continue
+            out=$(psql "$DB" -X -q -f "$f" 2>&1) || true
+            last=$(printf '%s\n' "$out" | grep -E '^[0-9]+/[0-9]+ passed' | tail -n 1)
+            echo "$f: ${last:-no result line}"
+            total=$(printf '%s' "$last" | sed -nE 's#^([0-9]+)/([0-9]+) passed.*#\1 \2#p')
+            if [ -z "$total" ] || [ "${total% *}" != "${total#* }" ]; then printf '%s\n' "$out" | tail -n 40; status=1; fi
+          done
+          exit $status

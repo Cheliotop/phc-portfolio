@@ -1,0 +1,23 @@
+appId: com.sergioclaudecode.PHCmobile
+---
+- launchApp:
+    clearState: true
+- extendedWaitUntil:
+    visible: "Selecciona tu acceso"
+    timeout: 20000
+- tapOn: "Operador"
+- assertVisible: "Acceso Operador"
+- tapOn: "usuario"
+- eraseText
+- inputText: "${PHC_OPERATOR_USERNAME}"
+- tapOn: "••••••••"
+- eraseText
+- inputText: "${PHC_OPERATOR_PASSWORD}"
+- hideKeyboard
+- tapOn: "Iniciar Sesión"
+- extendedWaitUntil:
+    visible: "Panel de Operador"
+    timeout: 15000
+- assertVisible: "${PHC_OPERATOR_DISPLAY_NAME}"
+- assertVisible: "Salir"
+- takeScreenshot: login-operador-success

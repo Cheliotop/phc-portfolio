@@ -12,3 +12,11 @@ coverage/
 *.tsbuildinfo
 
 node_modules
+
+# Native build tooling is source distribution material.
+!PHC_Mobile/phc-native/android/gradle/wrapper/gradle-wrapper.jar
+docs/audits/
+
+__pycache__/
+*.pyc
+*.keystore

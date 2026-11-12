@@ -2,7 +2,7 @@ import * as SecureStore from 'expo-secure-store';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import type { Session } from '@supabase/supabase-js';
 import supabase from '../lib/supabase';
-import { bytesToHex, hexToBytes, pbkdf2HmacSha256, randomBytes } from './passwordKdf';
+import { bytesToHex, hexToBytes, pbkdf2HmacSha256Async, randomBytes } from './passwordKdf';
 import { rememberSignedInOperator } from '../db/repositories/operators';
 
 const VAULT_KEY = 'phc.operatorVault.v1';
@@ -46,7 +46,7 @@ export async function saveVaultOperator(user: {
   const record: VaultOperator = {
     id: user.id, username: (user.username || user.email?.split('@')[0] || '').toLowerCase(),
     fullName: displayName(user), role: 'operator', session: activeSession,
-    salt: bytesToHex(salt), verifier: bytesToHex(pbkdf2HmacSha256(password, salt, PBKDF2_ITERATIONS)),
+    salt: bytesToHex(salt), verifier: bytesToHex(await pbkdf2HmacSha256Async(password, salt, PBKDF2_ITERATIONS)),
     iterations: PBKDF2_ITERATIONS,
   };
   await updateVault((operators) => [record, ...operators.filter((item) => item.id !== user.id)].slice(0, 6));
@@ -76,7 +76,7 @@ supabase.auth.onAuthStateChange((event, session) => {
 export async function verifyVaultPassword(username: string, password: string): Promise<VaultOperator | null> {
   const operator = (await readVault()).find((item) => item.username.toLowerCase() === username.trim().toLowerCase());
   if (!operator) return null;
-  const actual = pbkdf2HmacSha256(password, hexToBytes(operator.salt), operator.iterations);
+  const actual = await pbkdf2HmacSha256Async(password, hexToBytes(operator.salt), operator.iterations);
   const expected = hexToBytes(operator.verifier);
   let mismatch = actual.length ^ expected.length;
   for (let i = 0; i < Math.max(actual.length, expected.length); i++) mismatch |= (actual[i] ?? 0) ^ (expected[i] ?? 0);

@@ -1,13 +1,13 @@
-# PHC portfolio state
+# PHC complete-source distribution
 
-Purpose: sanitized AI-assisted development portfolio for technical review.
-Source baseline: 2ce73e868485; see docs/SNAPSHOT.md for differences from deployment.
-Current scope: source, tests, architecture and honest contribution statement.
-Production credentials, client records and original history excluded.
-Validation: docs/VERIFICATION.md. Application remains under field validation.
-Status: PUBLIC at https://github.com/Cheliotop/phc-portfolio.
-Clean-install CI43329874537 passed mobile and web before publication.
-Publication scan:469 tracked files;0 blocked credential/excluded-path/symlink findings.
-Next: reviewer feedback; no production rollout implied.
-Rollback: owner can return this separate repository to private; original repository
-and production state were not changed.
+Objective: publish the complete current software with anonymized configuration.
+Source: local PHC HEAD2ce73e868485 plus current uncommitted application/auth edits,
+web lockfile and20261112093524 migration.58 migrations total.
+Includes native Android/assets/Gradle tooling, web, Edge Functions, schema,
+local fixtures/regressions, CI/build/deployment configuration and scripts.
+Excludes private credentials/data, generated builds, editor metadata, operational
+screenshots and original history. Retired Express is not the current backend.
+Authority: docs/SOURCE_INVENTORY.json and docs/SNAPSHOT.md.
+Checks: docs/VERIFICATION.md. Clean-rebuild CI pending for this update.
+Next: check CI, publish verification result. No production action authorized.
+Rollback: revert this publication update; original project remains unchanged.

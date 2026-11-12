@@ -1,0 +1,65 @@
+appId: com.sergioclaudecode.PHCmobile
+---
+- runFlow: login-operador.yaml
+- tapOn: "Turnos"
+- extendedWaitUntil:
+    visible: "Turno de trabajo"
+    timeout: 30000
+- extendedWaitUntil:
+    visible: "${PHC_PROJECT_NAME}"
+    timeout: 30000
+- runFlow:
+    when:
+      visible: "TURNO ACTIVO|INFORME PENDIENTE"
+    commands:
+      - scrollUntilVisible:
+          element:
+            text: "Finalizar turno e informe"
+          direction: DOWN
+      - tapOn: "Finalizar turno e informe"
+      - extendedWaitUntil:
+          visible: "Finalizar turno"
+          timeout: 15000
+      - tapOn: "Finalizar"
+      - scrollUntilVisible:
+          element:
+            text: "Turno finalizado e informe sincronizado."
+          direction: UP
+      - assertVisible: "Turno finalizado e informe sincronizado."
+- extendedWaitUntil:
+    visible: "Iniciar turno"
+    timeout: 30000
+- runFlow:
+    when:
+      visible: "Selecciona un pozo…"
+    commands:
+      - tapOn: "Selecciona un pozo…"
+      - tapOn: "${PHC_PROJECT_NAME}"
+- assertVisible: "${PHC_PROJECT_NAME}"
+- tapOn:
+    text: "Iniciar turno"
+    index: 1
+- extendedWaitUntil:
+    visible: "TURNO ACTIVO"
+    timeout: 30000
+- assertVisible: "${PHC_PROJECT_NAME}"
+- assertVisible: "Turno iniciado y sincronizado. Confirma el traspaso de materiales."
+- scrollUntilVisible:
+    element:
+      text: "Confirmar traspaso"
+      index: 1
+    direction: DOWN
+- tapOn:
+    text: "Confirmar traspaso"
+    index: 1
+- scrollUntilVisible:
+    element:
+      text: "Traspaso confirmado."
+    direction: UP
+- assertVisible: "Traspaso confirmado."
+- scrollUntilVisible:
+    element:
+      text: "Informe para finalizar"
+    direction: DOWN
+- assertVisible: "Informe para finalizar"
+- takeScreenshot: iniciar-turno-success

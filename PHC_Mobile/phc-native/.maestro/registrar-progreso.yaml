@@ -1,0 +1,37 @@
+appId: com.sergioclaudecode.PHCmobile
+---
+- runFlow: iniciar-turno.yaml
+- tapOn: "Progreso"
+- extendedWaitUntil:
+    visible: "Registro de Progreso"
+    timeout: 30000
+# The Progreso picker labels items "<name> - <location>" (ProgresoTab.tsx:404),
+# whereas Turnos shows the bare project name. They need separate variables:
+# PHC_PROJECT_NAME for the Turnos assertions inside iniciar-turno.yaml, and
+# PHC_PROJECT_PICKER_LABEL for this picker.
+- tapOn: "Selecciona un pozo…"
+- tapOn: "${PHC_PROJECT_PICKER_LABEL}"
+- assertVisible: "${PHC_PROJECT_PICKER_LABEL}"
+- tapOn:
+    text: "^[0-2][0-9]:[0-5][0-9]$"
+    index: 0
+- eraseText
+- inputText: "00:01"
+- tapOn: "HH:MM"
+- eraseText
+- inputText: "00:02"
+- hideKeyboard
+- tapOn:
+    text: "Arcilla"
+- scrollUntilVisible:
+    element:
+      text: "Guardar Progreso"
+    direction: DOWN
+- tapOn: "Guardar Progreso"
+- scrollUntilVisible:
+    element:
+      text: "Barra guardada y sincronizada con el servidor."
+    direction: UP
+- assertVisible: "Barra guardada y sincronizada con el servidor."
+- assertVisible: "${PHC_PROJECT_PICKER_LABEL}"
+- takeScreenshot: registrar-progreso-success

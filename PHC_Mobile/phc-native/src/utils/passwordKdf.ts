@@ -93,3 +93,25 @@ export function randomBytes(length: number): number[] {
     return Math.floor(Math.random() * 256) ^ (Date.now() & 255) ^ fallbackCounter;
   });
 }
+
+
+export async function pbkdf2HmacSha256Async(password: string, salt: number[], iterations: number, keyLength = 32): Promise<number[]> {
+  if (!Number.isInteger(iterations) || iterations < 1) throw new Error('Invalid PBKDF2 iterations');
+  if (!Number.isInteger(keyLength) || keyLength < 1) throw new Error('Invalid PBKDF2 key length');
+  const secret = utf8(password);
+  const output: number[] = [];
+  for (let block = 1; output.length < keyLength; block++) {
+    const suffix = [(block>>>24)&255,(block>>>16)&255,(block>>>8)&255,block&255];
+    let u = hmacSha256(secret, concat(salt, suffix));
+    const result = u.slice();
+    for (let i = 1; i < iterations; i++) {
+      // Same iterations/output as the synchronous verifier; yield to input and
+      // rendering instead of blocking Hermes for the entire derivation.
+      if (i % 128 === 0) await new Promise<void>((resolve) => setTimeout(resolve, 0));
+      u = hmacSha256(secret, u);
+      for (let j = 0; j < result.length; j++) result[j] ^= u[j];
+    }
+    output.push(...result);
+  }
+  return output.slice(0, keyLength);
+}

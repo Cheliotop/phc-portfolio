@@ -1,0 +1,144 @@
+name: Production backup (off-site)
+
+# The other half of the free-tier safety net.
+#
+# backups.take_snapshot() (migration 20260726020000) runs daily INSIDE the
+# database and covers the likely failure — a bad migration, a wrong UPDATE, an
+# accidental delete. It does not survive the project itself being deleted or
+# corrupted, because the snapshots live in the same database.
+#
+# This workflow is the off-site copy. It runs pg_dump through the Supabase CLI
+# and keeps the result as a build artifact, outside Supabase entirely.
+#
+# Cost: free. Private repos on the GitHub free plan get 2,000 Actions minutes a
+# month; this job takes ~1-2 minutes, so ~60 min/month for a nightly run.
+#
+# SETUP — one secret, added by a human:
+#   Settings -> Secrets and variables -> Actions -> New repository secret
+#     Name:  SUPABASE_DB_URL
+#     Value: the URI from Supabase dashboard ->
+#              Project Settings -> Database -> Connection string -> URI
+#            (include the password; use the DIRECT connection, not the
+#             transaction-mode pooler — pg_dump needs a session connection)
+#
+# Until that secret exists the job fails immediately with a clear message
+# rather than silently producing an empty backup.
+
+# Public source template only. Never upload private database dumps as public CI artifacts.
+# Copy to a PRIVATE operations repository before configuring any backup credentials.
+on:
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+concurrency:
+  group: prod-data-backup
+  cancel-in-progress: false
+
+jobs:
+  dump:
+    if: github.event.repository.private == true
+    name: pg_dump production
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Fail early if the secret is missing
+        env:
+          DB_URL: ${{ secrets.SUPABASE_DB_URL }}
+        run: |
+          if [ -z "$DB_URL" ]; then
+            echo "::error::SUPABASE_DB_URL is not set. See the setup note at the top of this workflow."
+            exit 1
+          fi
+          echo "secret present"
+
+      - uses: actions/checkout@v4
+
+      - name: Install Supabase CLI
+        uses: supabase/setup-cli@v1
+        with:
+          # Pinned on purpose. With `latest`, a new CLI release can stop the
+          # backups overnight with no change in this repo. CLI v3 warns about
+          # [inbucket] in supabase/config.toml and failed here, so upgrade
+          # deliberately, then run this workflow by hand to confirm.
+          version: 2.122.0
+
+      - name: Dump roles, schema and data
+        env:
+          DB_URL: ${{ secrets.SUPABASE_DB_URL }}
+        run: |
+          set -euo pipefail
+          mkdir -p dump
+          # Three files rather than one: a schema-only dump restores into an
+          # empty project, and a data-only dump reloads into an existing one.
+          # Needing one should not force you to untangle the other.
+          supabase db dump --db-url "$DB_URL" --role-only -f dump/roles.sql
+          supabase db dump --db-url "$DB_URL"             -f dump/schema.sql
+          supabase db dump --db-url "$DB_URL" --data-only -f dump/data.sql
+
+      - name: Verify the dump is real
+        run: |
+          set -euo pipefail
+          # A backup that silently produced nothing is worse than no backup,
+          # because it looks green. Fail loudly instead.
+          fail=0
+          for f in dump/schema.sql dump/data.sql; do
+            size=$(wc -c < "$f")
+            echo "$f: $size bytes"
+            if [ "$size" -lt 1000 ]; then
+              echo "::error::$f is only $size bytes — treating as a failed dump"
+              fail=1
+            fi
+          done
+          # Managed Supabase projects intentionally expose only a small set of
+          # dumpable roles, so roles.sql can be a few hundred bytes and still
+          # be complete. Validate its content instead of applying the data-file
+          # size threshold to it.
+          roles_size=$(wc -c < dump/roles.sql)
+          echo "dump/roles.sql: $roles_size bytes"
+          if [ "$roles_size" -lt 100 ] || ! grep -qE '^(CREATE|ALTER) ROLE ' dump/roles.sql; then
+            echo "::error::dump/roles.sql does not contain a real role definition"
+            fail=1
+          fi
+          # Prove the data dump actually contains rows, not just a header.
+          if ! grep -qE '^(COPY|INSERT INTO) ' dump/data.sql; then
+            echo "::error::dump/data.sql has no COPY or INSERT statements"
+            fail=1
+          fi
+          # And that the schema dump reached the app's own tables, so a
+          # permissions problem that dumps only extensions cannot pass.
+          for t in projects shifts drilling_bars profiles; do
+            # pg_dump quotes identifiers ("public"."projects"); avoid \b,
+            # which is not a portable basic-grep word-boundary escape.
+            grep -qE "CREATE TABLE.*[\".]${t}\"?[[:space:]]*\\(" dump/schema.sql \
+              || { echo "::error::schema.sql is missing table ${t}"; fail=1; }
+          done
+          exit $fail
+
+      - name: Summarise
+        run: |
+          {
+            echo "### Production backup"
+            echo
+            echo '| file | bytes |'
+            echo '|---|---|'
+            for f in dump/roles.sql dump/schema.sql dump/data.sql; do
+              printf '| %s | %s |\n' "$(basename "$f")" "$(wc -c < "$f")"
+            done
+            echo
+            echo "Restore: apply \`roles.sql\`, then \`schema.sql\`, then \`data.sql\`."
+            echo "Note the in-database snapshots (\`backups.snapshots\`) are a separate,"
+            echo "faster recovery path for accidental data loss — see migration 20260726020000."
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Upload
+        uses: actions/upload-artifact@v4
+        with:
+          name: prod-backup-${{ github.run_id }}
+          path: dump/
+          # 90 days is the free-plan maximum. Deliberately NOT committed to the
+          # repo: profiles and audit_log are real client data and git history is
+          # forever.
+          retention-days: 90
+          if-no-files-found: error

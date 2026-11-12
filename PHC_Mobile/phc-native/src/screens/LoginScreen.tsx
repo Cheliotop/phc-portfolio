@@ -298,8 +298,8 @@ const LoginScreen = () => {
 
             <Text style={styles.inputLabel}>Contraseña</Text>
             <TextInput
-      returnKeyType="done"
-      onSubmitEditing={Keyboard.dismiss}
+              returnKeyType="go"
+              onSubmitEditing={() => { Keyboard.dismiss(); if (!loading) void handleLogin(); }}
               style={styles.input}
               value={password}
               onChangeText={setPassword}

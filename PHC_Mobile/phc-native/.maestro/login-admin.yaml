@@ -1,0 +1,22 @@
+appId: com.sergioclaudecode.PHCmobile
+---
+- launchApp:
+    clearState: true
+- extendedWaitUntil:
+    visible: "Selecciona tu acceso"
+    timeout: 30000
+- tapOn: "Administrador"
+- assertVisible: "Acceso Administrador"
+- tapOn: "admin@ejemplo.com"
+- eraseText
+- inputText: "${PHC_ADMIN_EMAIL}"
+- tapOn: "••••••••"
+- eraseText
+- inputText: "${PHC_ADMIN_PASSWORD}"
+- hideKeyboard
+- tapOn: "Iniciar Sesión"
+- extendedWaitUntil:
+    visible: "Administración"
+    timeout: 30000
+- assertVisible: "Panel de Control"
+- takeScreenshot: login-admin-success

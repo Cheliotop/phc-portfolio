@@ -18,7 +18,14 @@ export const operatorsApi = {
       .select('*')
       .order('username'), options);
     if (error) throw error;
-    return data || [];
+    const rows = data || [];
+    if (!rows.length) return rows;
+    const { data: statuses, error: statusError } = await supabase.rpc('operator_auth_status', {
+      p_operator_ids: rows.map((row: any) => row.id),
+    });
+    if (statusError) throw statusError;
+    const available = new Map((statuses || []).map((row: any) => [row.id, row.auth_available]));
+    return rows.map((row: any) => ({ ...row, auth_available: available.get(row.id) === true }));
   },
 
   async getActive(options?: OperatorListOptions) {
@@ -49,7 +56,12 @@ export const operatorsApi = {
       .eq('username', username)
       .maybeSingle();
     if (error) throw error;
-    return data;
+    if (!data) return null;
+    const { data: statuses, error: statusError } = await supabase.rpc('operator_auth_status', {
+      p_operator_ids: [data.id],
+    });
+    if (statusError) throw statusError;
+    return statuses?.[0]?.auth_available === true ? data : null;
   },
 
   // Counts, per operator id, how many wells that operator is actually on.

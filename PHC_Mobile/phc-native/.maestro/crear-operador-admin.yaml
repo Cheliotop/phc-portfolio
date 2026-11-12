@@ -1,0 +1,33 @@
+appId: com.sergioclaudecode.PHCmobile
+---
+- runFlow: login-admin.yaml
+- tapOn: "Catálogo"
+- extendedWaitUntil:
+    visible: "Catálogo de Materiales"
+    timeout: 30000
+- tapOn: "Operación"
+- extendedWaitUntil:
+    visible: "Filtros"
+    timeout: 30000
+- tapOn: "Operadores"
+- extendedWaitUntil:
+    visible: "Gestión de Operadores"
+    timeout: 30000
+- tapOn: "+ Agregar"
+- assertVisible: "Agregar Nuevo Operador"
+- tapOn: "Nombre completo del operador"
+- inputText: "${PHC_NEW_OPERATOR_NAME}"
+- tapOn: "Usuario para iniciar sesión"
+- inputText: "${PHC_NEW_OPERATOR_USERNAME}"
+- tapOn: "Contraseña inicial"
+- inputText: "${PHC_NEW_OPERATOR_PASSWORD}"
+- hideKeyboard
+- tapOn: "Agregar"
+- extendedWaitUntil:
+    visible: "Éxito"
+    timeout: 30000
+- tapOn: "Entendido"
+- extendedWaitUntil:
+    visible: "${PHC_NEW_OPERATOR_NAME}"
+    timeout: 30000
+- takeScreenshot: crear-operador-admin-success

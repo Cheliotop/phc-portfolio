@@ -11,7 +11,9 @@ try {
 } catch {
   throw new Error('VITE_SUPABASE_URL no está configurada correctamente.');
 }
-if (parsedUrl.protocol !== 'https:' || parsedUrl.hostname !== EXPECTED_PROJECT_HOST) {
+const localQa = import.meta.env.VITE_PHC_LOCAL_QA === 'true';
+const allowedLocal = localQa && parsedUrl.protocol === 'http:' && ['127.0.0.1', 'localhost'].includes(parsedUrl.hostname) && parsedUrl.port === '54321';
+if (!allowedLocal && (parsedUrl.protocol !== 'https:' || parsedUrl.hostname !== EXPECTED_PROJECT_HOST)) {
   throw new Error('El panel web no está configurado para el proyecto Supabase de producción.');
 }
 if (!SUPABASE_PUBLISHABLE_KEY || isSecretKey(SUPABASE_PUBLISHABLE_KEY)) {

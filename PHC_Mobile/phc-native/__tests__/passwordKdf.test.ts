@@ -1,4 +1,4 @@
-import { bytesToHex, hexToBytes, hmacSha256, pbkdf2HmacSha256, sha256 } from '../src/utils/passwordKdf';
+import { bytesToHex, hexToBytes, hmacSha256, pbkdf2HmacSha256, pbkdf2HmacSha256Async, sha256 } from '../src/utils/passwordKdf';
 
 const ascii = (text: string) => Array.from(text, (character) => character.charCodeAt(0));
 
@@ -32,4 +32,14 @@ describe('local SHA-256 key derivation', () => {
   it('round-trips hex encoding', () => {
     expect(bytesToHex(hexToBytes('00ff10'))).toBe('00ff10');
   });
+});
+
+// Cryptographic output and work factor must not change when yielding to UI.
+it('async derivation matches the synchronous multi-block output and yields to timers', async () => {
+  let timerRan = false;
+  const timer = setTimeout(() => { timerRan = true; }, 0);
+  const result = await pbkdf2HmacSha256Async('Password', ascii('NaCl'), 257, 64);
+  clearTimeout(timer);
+  expect(result).toEqual(pbkdf2HmacSha256('Password', ascii('NaCl'), 257, 64));
+  expect(timerRan).toBe(true);
 });

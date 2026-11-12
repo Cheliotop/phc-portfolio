@@ -1,0 +1,81 @@
+appId: com.sergioclaudecode.PHCmobile
+---
+- runFlow: login-admin.yaml
+- tapOn: "Proyectos"
+- extendedWaitUntil:
+    visible: "Todos los Proyectos"
+    timeout: 30000
+- tapOn: "+ Nuevo"
+- assertVisible: "Nuevo Proyecto / Pozo"
+- tapOn: "Ej: Pozo Filadelfia Norte"
+- inputText: "${PHC_ADMIN_PROJECT_NAME}"
+- assertVisible: "Nuevo Proyecto / Pozo"
+- hideKeyboard
+- scrollUntilVisible:
+    element:
+      id: "create-project-well-name-input"
+    direction: DOWN
+- tapOn:
+    id: "create-project-well-name-input"
+- inputText: "${PHC_ADMIN_WELL_NAME}"
+- tapOn: "Nombre del cliente"
+- inputText: "${PHC_ADMIN_CLIENT_NAME}"
+- hideKeyboard
+- scrollUntilVisible:
+    element:
+      text: "${PHC_ADMIN_OPERATOR_NAME}"
+    direction: DOWN
+- tapOn: "${PHC_ADMIN_OPERATOR_NAME}"
+- scrollUntilVisible:
+    element:
+      text: "Ej: 120"
+    direction: DOWN
+- tapOn: "Ej: 120"
+- inputText: "120"
+- hideKeyboard
+- scrollUntilVisible:
+    element:
+      text: "Crear y Asignar Proyecto"
+    direction: DOWN
+- tapOn: "Crear y Asignar Proyecto"
+- extendedWaitUntil:
+    visible: "Éxito"
+    timeout: 30000
+- tapOn: "Entendido"
+- extendedWaitUntil:
+    visible: "Todos los Proyectos"
+    timeout: 30000
+# The new project can land on any server page depending on sort order, not
+# necessarily the first one, so page through with "Cargar más proyectos"
+# until it's actually on screen instead of assuming it's already visible.
+- runFlow:
+    when:
+      visible: "Cargar más proyectos"
+    commands:
+      - scrollUntilVisible:
+          element:
+            text: "Cargar más proyectos"
+          direction: DOWN
+          timeout: 10000
+          speed: 80
+      - tapOn: "Cargar más proyectos"
+      - runFlow:
+          when:
+            visible: "Cargar más proyectos"
+          commands:
+            - scrollUntilVisible:
+                element:
+                  text: "Cargar más proyectos"
+                direction: DOWN
+                timeout: 10000
+                speed: 80
+            - tapOn: "Cargar más proyectos"
+- scrollUntilVisible:
+    element:
+      text: "${PHC_ADMIN_PROJECT_NAME}"
+    direction: DOWN
+    timeout: 30000
+    speed: 80
+- assertVisible: "${PHC_ADMIN_PROJECT_NAME}"
+- assertVisible: "Operador: ${PHC_ADMIN_OPERATOR_NAME}"
+- takeScreenshot: crear-proyecto-admin-success
