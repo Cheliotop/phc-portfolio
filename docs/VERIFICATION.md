@@ -1,6 +1,12 @@
 # Verificación y pendientes
 
-Comprobaciones sobre esta copia anonimizada, 12 de noviembre de 2026:
+**CI con instalación limpia: PASS móvil y web.**
+[GitHub Actions, ejecución 43329874537](https://github.com/Cheliotop/phc-portfolio/actions/runs/43329874537)
+ejecutó `npm ci`, TypeScript y todas las pruebas móviles con Node22, y `npm ci`,
+pruebas y build web con Node24. El código de aplicación verificado no cambia en
+la actualización de documentación que registra este resultado.
+
+Comprobaciones locales previas sobre esta copia, 12 de noviembre de 2026:
 
 | Comprobación | Resultado |
 |---|---|
