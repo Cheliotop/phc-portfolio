@@ -1,3 +1,4 @@
+\set ON_ERROR_STOP on
 -- Rollback-only local regression. Real authenticated roles; no service bypass
 -- is used to assert RPC access. Existing local QA identities are test fixtures.
 BEGIN;
@@ -31,3 +32,4 @@ DO $$ BEGIN
  RAISE NOTICE 'PASS anonymous helper execute revoked';
 END $$;
 ROLLBACK;
+\echo 5/5 passed

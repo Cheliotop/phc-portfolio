@@ -83,3 +83,10 @@ node supabase/seed/edge-functions-audit.js
 - Mobile operator usernames: `qa_operator_01` through `qa_operator_10` (the app adds `@phc.local`)
 
 The deterministic dataset contains 30 projects (planning, active, closure submitted, and completed), ten operators, open and closed shifts, continuous drilling histories, both project-material layers, both pedido kinds with pending/approved/rejected/partial/received states, receipts, Fichas v2, and photo metadata.
+
+## Account lifecycle regression
+
+After the initial seed, run `node supabase/seed/prepare-auth-lifecycle.js` from the
+repository root. It creates and soft-deletes a synthetic local identity through
+Auth Admin APIs so `operator-auth-lifecycle.sql` is reproducible without a browser.
+The SQL suite is rollback-only and fails immediately on any assertion error.

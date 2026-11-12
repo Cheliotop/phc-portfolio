@@ -55,6 +55,10 @@ jobs:
           echo "PHC_LOCAL_SUPABASE_SECRET_KEY=$TOKEN" >> "$GITHUB_ENV"
           PHC_LOCAL_SUPABASE_PUBLISHABLE_KEY="$TOKEN" PHC_LOCAL_SUPABASE_SECRET_KEY="$TOKEN" node seed-local.js
 
+      - name: Local account-lifecycle fixture
+        working-directory: supabase/seed
+        run: node prepare-auth-lifecycle.js
+
       # Same order as on the workstation: the JS suites first (closure-audit completes
       # one seeded well), then the SQL suites, each rolled back.
       - name: JS audit suites
